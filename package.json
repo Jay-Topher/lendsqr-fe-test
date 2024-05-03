@@ -7,13 +7,26 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.16",
+    "@tanstack/react-query": "^5.32.1",
+    "@tanstack/react-query-devtools": "^5.32.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "14.2.1",
+    "@testing-library/user-event": "14.4.3",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.8",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
@@ -22,7 +35,11 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "jsdom": "^24.0.0",
+    "sass": "^1.76.0",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "unplugin-auto-import": "^0.17.5",
+    "vite": "^5.2.0",
+    "vitest": "^1.5.3"
   }
 }
