@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+@for $weight from 100 through 700 {
+  .font-#{ $weight } {
+    font-weight: $weight;
+  }
+}
