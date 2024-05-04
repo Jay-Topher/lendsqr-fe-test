@@ -1,0 +1,17 @@
+.app-btn {
+  font-size: 0.875rem;
+  padding: 0.875rem 1rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+
+  &.is-filled {
+    border: none;
+  }
+
+  &.primary {
+    background-color: $btn-primary;
+    color: $white;
+  }
+}

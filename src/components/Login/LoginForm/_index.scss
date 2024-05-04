@@ -1,0 +1,12 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 27rem;
+
+  .show-password-btn {
+    border: none;
+    background: none;
+    color: $btn-primary;
+  }
+}

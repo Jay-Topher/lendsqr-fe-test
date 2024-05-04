@@ -1,9 +1,9 @@
 import { Palette, PaletteOptions } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { Typography } from "@mui/material/styles/createTypography";
-import AvenirRegular from "../assets/fonts/avenir-next-regular.ttf";
-import AvenirBold from "../assets/fonts/avenir-next-bold.ttf";
-import AvenirMedium from "../assets/fonts/avenir-next-medium.ttf";
+import AvenirRegular from "/fonts/avenir-next-regular.ttf";
+import AvenirBold from "/fonts/avenir-next-bold.ttf";
+import AvenirMedium from "/fonts/avenir-next-medium.ttf";
 
 declare module "@mui/material/styles" {
   interface Theme {
