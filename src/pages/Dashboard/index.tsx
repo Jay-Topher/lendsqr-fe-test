@@ -1,5 +1,7 @@
+import Users from "@/components/Users";
+
 const Dashboard = () => {
-  return <div className="font-400">Dashboard</div>;
+  return <Users />;
 };
 
 export default Dashboard;

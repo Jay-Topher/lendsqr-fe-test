@@ -1,6 +1,7 @@
 /// <reference types="vite-plugin-svgr/client" />
 import { DrawerMenuLinks } from "./types";
 import Users from "@/assets/icons/users.svg?react";
+import UsersCard from "@/assets/icons/users-card.svg?react";
 import Guarantors from "@/assets/icons/guarantors.svg?react";
 import Loans from "@/assets/icons/loans.svg?react";
 import DecisionModels from "@/assets/icons/decision-models.svg?react";
@@ -19,12 +20,22 @@ import Reports from "@/assets/icons/reports.svg?react";
 import Preferences from "@/assets/icons/preferences.svg?react";
 import Percentage from "@/assets/icons/percentage.svg?react";
 import AuditLogs from "@/assets/icons/audit-logs.svg?react";
+import ActiveUsers from "@/assets/icons/active-users.svg?react";
+import LoanUsers from "@/assets/icons/loan-users.svg?react";
+import SavingsUsers from "@/assets/icons/savings-users.svg?react";
 
 export const APP_ROUTES = {
   dashboard: "/dashboard",
   home: "/dashboard/users",
   userDetails: (id: string) => `/dashboard/users/${id}`,
   login: "/login",
+};
+
+export const COLORS = {
+  white: "#ffffff",
+  primary: "#545f7d",
+  btnPrimary: "#39cdcc",
+  brand: "#213f7d",
 };
 
 export const DRAWER_WIDTH = 283;
@@ -134,4 +145,19 @@ export const drawerMenuLinks: DrawerMenuLinks[] = [
       { title: "Audit Logs", href: "#", icon: AuditLogs },
     ],
   },
+];
+
+export const cardAnalytics = [
+  { title: "Users", figure: "2,453", Icon: UsersCard },
+  { title: "Active users", figure: "2,453", Icon: ActiveUsers },
+  { title: "Users with loans", figure: "12,453", Icon: LoanUsers },
+  { title: "Users with savings", figure: "12,453", Icon: SavingsUsers },
+];
+
+export const userStatus = ["Active", "Inactive", "Pending", "Blacklisted"];
+export const sampleOrganizations = [
+  "LOT Polish Airlines",
+  "Air France-KLM",
+  "Etihad Airways",
+  "Qatar Airways",
 ];

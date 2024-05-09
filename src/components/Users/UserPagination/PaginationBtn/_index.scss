@@ -1,0 +1,13 @@
+.pagination-btn {
+  border: none;
+  border-radius: 4px;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #213f7d1a;
+  display: grid;
+  place-items: center;
+
+  &.is-next {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,20 @@
+.card {
+  background-color: $white;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+
+  .card-icon {
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .card__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card-figure {
+    color: $brand-color;
+  }
+}

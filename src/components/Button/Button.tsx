@@ -17,6 +17,7 @@ const Button = ({
   color,
   width,
   variant,
+  borderColor,
 }: Props) => {
   return (
     <button
@@ -31,6 +32,7 @@ const Button = ({
       style={{
         color,
         backgroundColor: bgColor,
+        borderColor, 
         width,
       }}
     >
