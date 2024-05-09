@@ -1,0 +1,28 @@
+.status-chip {
+  height: 1.875rem;
+  border-radius: 0.9375rem;
+  text-align: center;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+
+  &.active {
+    @include background-opacity(#39CD62, 0.06);
+    color: #39CD62;
+  }
+
+  &.inactive {
+    @include background-opacity(#545F7D, 0.06);
+    color: #545F7D;
+  }
+
+  &.pending {
+    @include background-opacity(#E9B200, 0.1);
+    color: #E9B200;
+  }
+
+  &.blacklisted {
+    @include background-opacity(#E4033B, 0.1);
+    color: #E4033B;
+  }
+}

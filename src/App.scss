@@ -1,9 +1,18 @@
+@mixin background-opacity($color, $opacity) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
 @import "./styles/variables";
 @import "@/components/Button";
 @import "@/components/Login/LoginForm";
 @import "@/components/Login/LoginWrapper";
 @import "@/components/Dashboard/DashboardDrawer";
 @import "@/components/SearchBox";
+@import "@/components/Users/UserPagination/PaginationBtn";
+@import "@/components/StatusChip";
+@import "@/components/Card";
+@import "@/components/CardContainer";
 
 * {
   box-sizing: border-box;
@@ -49,4 +58,8 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.box-shadow {
+  box-shadow: $drop-shadow !important;
 }

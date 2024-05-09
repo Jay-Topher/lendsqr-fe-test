@@ -82,6 +82,7 @@ const DashboardDrawer = ({ window }: Props) => {
           <IconButton
             sx={{ marginLeft: "auto", display: { xs: "block", sm: "none" } }}
             onClick={handleDrawerToggle}
+            aria-label="Menu"
           >
             <Hamburger />
           </IconButton>
