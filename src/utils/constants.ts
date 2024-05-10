@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { DrawerMenuLinks } from "./types";
+import { DrawerMenuLinks, FullUser } from "./types";
 import Users from "@/assets/icons/users.svg?react";
 import UsersCard from "@/assets/icons/users-card.svg?react";
 import Guarantors from "@/assets/icons/guarantors.svg?react";
@@ -23,6 +23,7 @@ import AuditLogs from "@/assets/icons/audit-logs.svg?react";
 import ActiveUsers from "@/assets/icons/active-users.svg?react";
 import LoanUsers from "@/assets/icons/loan-users.svg?react";
 import SavingsUsers from "@/assets/icons/savings-users.svg?react";
+import Tyre from "@/assets/icons/tyre.svg?react";
 
 export const APP_ROUTES = {
   dashboard: "/dashboard",
@@ -36,10 +37,13 @@ export const COLORS = {
   primary: "#545f7d",
   btnPrimary: "#39cdcc",
   brand: "#213f7d",
+  danger: "#E4033B",
 };
 
 export const DRAWER_WIDTH = 283;
 export const APP_BAR_HEIGHT = 100;
+export const USER_KEY = "lendsqr-user";
+export const TOKEN_KEY = "lendsqr-token";
 
 export const drawerMenuLinks: DrawerMenuLinks[] = [
   {
@@ -143,6 +147,7 @@ export const drawerMenuLinks: DrawerMenuLinks[] = [
       { title: "Preferences", href: "#", icon: Preferences },
       { title: "Fees and Pricing", href: "#", icon: Percentage },
       { title: "Audit Logs", href: "#", icon: AuditLogs },
+      { title: "Systems Messages", href: "#", icon: Tyre },
     ],
   },
 ];
@@ -161,3 +166,53 @@ export const sampleOrganizations = [
   "Etihad Airways",
   "Qatar Airways",
 ];
+
+export const sampleUser: FullUser = {
+  status: "active",
+  name: { first: "Grace", middle: "Logan", last: "Effiom" },
+  username: "Grace-Effiom",
+  email: "grace@gmail.com",
+  phoneNumber: "07060780922",
+  dateJoined: "1999-01-04T00:53:53.386Z",
+  organization: { name: "LOT Polish Airlines", iataCode: "LO" },
+  id: "LSQFf587g90",
+  teir: 1,
+  bank: {
+    name: "Providus Bank",
+    accountNumber: "9912345678",
+    balance: "₦200,000.00",
+    bvn: "07060780922",
+  },
+  maritalStatus: "Single",
+  children: 0,
+  residenceType: "Parent’s Apartment",
+  gender: "Female",
+  employment: {
+    educationLevel: "B.Sc",
+    employmentStatus: "Employed",
+    employmentSector: "FinTech",
+    employmentDuration: "2 years",
+    officeEmail: "grace@lendsqr.com",
+    monthlyIncome: "₦200,000.00- ₦400,000.00",
+    loanRepayment: "₦40,000.00",
+  },
+  socials: {
+    twitter: "@grace_effiom",
+    facebook: "Grace Effiom",
+    instagram: "@grace_effiom",
+  },
+  guarantors: [
+    {
+      fullName: "Debby Ogana",
+      phoneNumber: "07060780922",
+      email: "debby@gmail.com",
+      relationship: "Sister",
+    },
+    {
+      fullName: "Debby Ogana",
+      phoneNumber: "07060780922",
+      email: "debby@gmail.com",
+      relationship: "Sister",
+    },
+  ],
+};

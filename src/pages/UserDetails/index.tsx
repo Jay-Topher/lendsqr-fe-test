@@ -1,5 +1,5 @@
-const UserDetails = () => {
-  return <div>UserDetails</div>;
-};
+import UserDetails from "@/components/UserDetails";
 
-export default UserDetails;
+const UserDetailsPage = () => <UserDetails />;
+
+export default UserDetailsPage;

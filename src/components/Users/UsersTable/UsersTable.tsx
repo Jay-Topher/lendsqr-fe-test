@@ -28,7 +28,8 @@ const createData = (user: User) => {
 interface UsersTableProps {
   users: User[];
 }
-const tableHeaders = [
+// eslint-disable-next-line react-refresh/only-export-components
+export const tableHeaders = [
   "Organization",
   "Username",
   "Email",
@@ -69,28 +70,40 @@ const UsersTable = ({ users }: UsersTableProps) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((user) => (
+          {rows.length ? (
+            rows.map((user) => (
+              <TableRow
+                key={user.id}
+                sx={{
+                  "&:last-child td, &:last-child th": { border: 0 },
+                }}
+              >
+                <TableCell>{user.organization}</TableCell>
+                <TableCell>{user.username}</TableCell>
+                <TableCell>{user.email}</TableCell>
+                <TableCell>{user.phoneNumber}</TableCell>
+                <TableCell>{user.dateJoined}</TableCell>
+                <TableCell>
+                  <StatusChip status={user.status} />
+                </TableCell>
+                <TableCell align="right">
+                  <FilterPopover Icon={DotMenu}>
+                    <TableActions id={user.id} />
+                  </FilterPopover>
+                </TableCell>
+              </TableRow>
+            ))
+          ) : (
             <TableRow
-              key={user.id}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
               }}
             >
-              <TableCell>{user.organization}</TableCell>
-              <TableCell>{user.username}</TableCell>
-              <TableCell>{user.email}</TableCell>
-              <TableCell>{user.phoneNumber}</TableCell>
-              <TableCell>{user.dateJoined}</TableCell>
-              <TableCell>
-                <StatusChip status={user.status} />
-              </TableCell>
-              <TableCell align="right">
-                <FilterPopover Icon={DotMenu}>
-                  <TableActions id={user.id} />
-                </FilterPopover>
+              <TableCell colSpan={7} align="center">
+                No users available
               </TableCell>
             </TableRow>
-          ))}
+          )}
         </TableBody>
       </Table>
     </TableContainer>

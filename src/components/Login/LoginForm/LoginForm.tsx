@@ -2,23 +2,33 @@ import { OutlinedInput, Link as MuiLink } from "@mui/material";
 import { Link } from "react-router-dom";
 import { APP_ROUTES } from "../../../utils/constants";
 import Button from "@/components/Button";
-import { useState } from "react";
+import useLogin from "@/hooks/useLogin";
 
 const LoginForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
+  const {
+    showPassword,
+    togglePasswordVisibility,
+    handleChange,
+    handleSubmit,
+    credentials,
+  } = useLogin();
+
   return (
-    <form className="login-form">
+    <form className="login-form" onSubmit={handleSubmit}>
       <OutlinedInput
         placeholder="Email"
         type="email"
         sx={{ borderRadius: "5px", borderColor: "#545F7D26" }}
         aria-label="Email"
+        name="email"
+        value={credentials.email}
+        onChange={handleChange}
         required
       />
       <OutlinedInput
         placeholder="Password"
         type={showPassword ? "text" : "password"}
+        value={credentials.password}
         sx={{ borderRadius: "5px", borderColor: "#545F7D26" }}
         endAdornment={
           <button
@@ -30,6 +40,8 @@ const LoginForm = () => {
           </button>
         }
         aria-label="Password"
+        name="password"
+        onChange={handleChange}
         required
       />
       <MuiLink
