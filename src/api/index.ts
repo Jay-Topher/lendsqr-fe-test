@@ -1,6 +1,6 @@
 import { User } from "@/utils/types";
 
-const API_URL = "https://run.mocky.io/v3/f28c4c9e-98f8-4770-9fa0-9a693d631583";
+const API_URL = "https://run.mocky.io/v3/64ee34f0-9ad1-4795-ae7a-f66fc4b36e5c";
 
 export const fetchUsers = async () => {
   try {

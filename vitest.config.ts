@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
 import * as path from "path";
+import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   resolve: {
@@ -15,4 +16,5 @@ export default defineConfig({
       include: ["src/**/*.{ts,tsx}"],
     },
   },
+  plugins: [svgr()],
 });

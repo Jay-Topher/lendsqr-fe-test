@@ -13,6 +13,8 @@
 @import "@/components/StatusChip";
 @import "@/components/Card";
 @import "@/components/CardContainer";
+@import "@/components/UserDetails";
+@import "@/components/UserDetails/UserDetailsCard";
 
 * {
   box-sizing: border-box;
@@ -56,10 +58,68 @@
   }
 }
 
+@for $unit from 1 through 50 {
+  .m-#{$unit} {
+    margin: calc($unit/16) + rem !important;
+  }
+
+  .mb-#{$unit} {
+    margin-bottom: calc($unit/16) + rem !important;
+  }
+
+  .mt-#{$unit} {
+    margin-top: calc($unit/16) + rem !important;
+  }
+
+  .mx-#{$unit} {
+    margin-left: calc($unit/16) + rem !important;
+    margin-right: calc($unit/16) + rem !important;
+  }
+
+  .my-#{$unit} {
+    margin-top: calc($unit/16) + rem !important;
+    margin-bottom: calc($unit/16) + rem !important;
+  }
+
+  .p-#{$unit} {
+    padding: calc($unit/16) + rem !important;
+  }
+
+  .pb-#{$unit} {
+    padding-bottom: calc($unit/16) + rem !important;
+  }
+
+  .pt-#{$unit} {
+    padding-top: calc($unit/16) + rem !important;
+  }
+
+  .px-#{$unit} {
+    padding-left: calc($unit/16) + rem !important;
+    padding-right: calc($unit/16) + rem !important;
+  }
+
+  .py-#{$unit} {
+    padding-top: calc($unit/16) + rem !important;
+    padding-bottom: calc($unit/16) + rem !important;
+  }
+}
+
 .uppercase {
   text-transform: uppercase;
 }
 
 .box-shadow {
   box-shadow: $drop-shadow !important;
+}
+
+.text-brand {
+  color: $brand-color !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.bg-white {
+  color: $white !important;
 }

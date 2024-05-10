@@ -1,0 +1,31 @@
+.user-details {
+  .back-link {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .user-details-header {
+    padding: 2rem 2rem 0 2rem;
+
+    .user-name {
+      margin-bottom: 0.3rem;
+    }
+
+    .user-tier-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}

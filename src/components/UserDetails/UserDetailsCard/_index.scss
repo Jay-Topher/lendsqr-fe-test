@@ -1,0 +1,11 @@
+.user-details-card {
+  .user-details-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    }
+  }
+}
