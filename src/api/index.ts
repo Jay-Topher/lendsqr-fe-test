@@ -1,6 +1,6 @@
 import { User } from "@/utils/types";
 
-const API_URL = "https://run.mocky.io/v3/64ee34f0-9ad1-4795-ae7a-f66fc4b36e5c";
+const API_URL = import.meta.env.VITE_API_URL as string;
 
 export const fetchUsers = async () => {
   try {

@@ -1,5 +1,6 @@
 import { TOKEN_KEY, USER_KEY } from "./constants";
 import { FullUser } from "./types";
+import { format, parseISO } from "date-fns";
 
 export const pxToRem = (value: number) => `${value / 16}rem`;
 
@@ -39,3 +40,6 @@ export const fetchLocalUsers = async () => {
   const result = (await import("./mockUsers.json")).result;
   return result as FullUser[];
 };
+
+export const formatDate = (date: string) =>
+  format(parseISO(date), "LLL d, yyyy h:mm a");
