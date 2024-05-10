@@ -5,7 +5,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { User } from "@/utils/types";
 import { Paper, Table } from "@mui/material";
-import { pxToRem } from "@/utils";
+import { formatDate, pxToRem } from "@/utils";
 import StatusChip from "@/components/StatusChip";
 import DotMenu from "@/assets/icons/dot-menu.svg?react";
 import FilterPopover from "@/components/FilterPopover";
@@ -82,7 +82,7 @@ const UsersTable = ({ users }: UsersTableProps) => {
                 <TableCell>{user.username}</TableCell>
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.phoneNumber}</TableCell>
-                <TableCell>{user.dateJoined}</TableCell>
+                <TableCell>{formatDate(user.dateJoined)}</TableCell>
                 <TableCell>
                   <StatusChip status={user.status} />
                 </TableCell>
